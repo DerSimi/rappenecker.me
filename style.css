@@ -32,24 +32,30 @@ body {
 }
 
 .box {
+    display: grid;
     position: relative;
     background-color: white;
     border-radius: 25px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.box-content {
-    display: flex;
-    flex-direction: row;
+.box-header {
+    height: 25px;
 }
 
 .box-content-text {
     font-family: 'MontserratLight', sans-serif;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 div.box-content-text p { /* Headline font */
     margin: 0;
     font-family: 'Montserrat-Medium', sans-serif;
+    font-size: 25px;
 }
 
 .box-content-avatar {
@@ -73,6 +79,8 @@ div.box-content-text p { /* Headline font */
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 10px;
+    margin-top: 15px;
+    padding-bottom: 15px;
 }
 
 svg {
@@ -97,6 +105,7 @@ div.footer a {
     text-decoration: none;
     color: black;
     font-family: 'MontserratLight', sans-serif;
+    font-size: 20px;
     user-select: none;
 }
 
@@ -110,42 +119,53 @@ div.footer a:hover {
 
 /* Media Queries */
 @media screen and (max-width: 676px) {
+    .box {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .box-header {
+        grid-row: 1;
+    }
+
+    .box-content-text {
+        min-width: none;
+        grid-row: 3;
+    }
+
+    .box-content-avatar {        
+        grid-row: 2;
+        margin-bottom: 10px;
+    }
+
+    .box-content-links {
+        grid-row: 4;
+    }
 }
 
 @media screen and (min-width: 677px) {
     .box {
-        height: 288px;
-        max-height: 288px;
         width: 676px;
         max-width: 676px;
     }
 
     .box-header {
-        height: 25px;
-    }
-
-    .box-content-space {
-        width: 20%;
+        grid-column: 1 / span 2;
+        grid-row: 1;
     }
 
     .box-content-text {
-        margin-left: 20px;
-        font-size: 20px;
-    }
-
-    div.box-content-text p {
-        font-size: 25px;
+        grid-column: 2;
+        grid-row: 2 / span 3;
+        min-width: 436px;
     }
 
     .box-content-avatar {
+        grid-row: 2;
         margin-left: 25px;
     }
 
     .box-content-links {
-        margin-top: 15px;
-    }
-
-    div.footer a {
-        font-size: 20px;
+        grid-row: 3;
     }
 }
