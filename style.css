@@ -92,18 +92,19 @@ svg:hover {
     width: 100%;
 }
 
-.footer:hover {
-    text-decoration: underline;
-}
-
 div.footer a {
     text-decoration: none;
     color: black;
     font-family: 'MontserratLight', sans-serif;
+    user-select: none;
 }
 
 div.footer a:visited {
     color: black;
+}
+
+div.footer a:hover {
+    text-decoration: underline;
 }
 
 /* Media Queries */
@@ -140,7 +141,7 @@ div.footer a:visited {
     }
 
     .box-content-links {
-        margin-top: 10px;
+        margin-top: 15px;
     }
 
     div.footer a {
