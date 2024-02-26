@@ -1,0 +1,149 @@
+/* Fonts */
+/* Headline font */
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('font/Montserrat-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* Text font */
+@font-face {
+    font-family: 'MontserratLight';
+    src: url('font/Montserrat-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* Layout */
+body {
+    margin: 0px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(to bottom, #2e6928,#b7bbcc, #2c5222); */
+}
+
+.box {
+    position: relative;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.box-content {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+}
+
+.box-content-text {
+    font-family: 'MontserratLight', sans-serif;
+}
+
+div.box-content-text p { /* Headline font */
+    margin: 0;
+    font-family: 'Montserrat-Medium', sans-serif;
+}
+
+.box-content-avatar {
+    width: 175px;
+    height: 175px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-image: url("./assets/me.png");
+    background-size: contain;
+    background-position: center;
+    transition: all .2s ease-in-out; 
+}
+
+.box-content-avatar:hover {
+    transform: scale(1.1);
+}
+
+.box-content-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+svg {
+    transition: all .2s ease-in-out;
+}
+
+svg:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    text-align: right;
+    width: 100%;
+}
+
+.footer:hover {
+    text-decoration: underline;
+}
+
+div.footer a {
+    text-decoration: none;
+    color: black;
+    font-family: 'MontserratLight', sans-serif;
+}
+
+div.footer a:visited {
+    color: black;
+}
+
+/* Media Queries */
+@media screen and (max-width: 676px) {
+}
+
+@media screen and (min-width: 677px) {
+    .box {
+        height: 288px;
+        max-height: 288px;
+        width: 676px;
+        max-width: 676px;
+    }
+
+    .box-header {
+        height: 25px;
+    }
+
+    .box-content-space {
+        width: 20%;
+    }
+
+    .box-content-text {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    div.box-content-text p {
+        font-size: 25px;
+    }
+
+    .box-content-avatar {
+        margin-left: 25px;
+    }
+
+    .box-content-links {
+        margin-top: 10px;
+    }
+
+    div.footer a {
+        font-size: 20px;
+    }
+}
