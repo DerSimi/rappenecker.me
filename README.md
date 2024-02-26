@@ -1,2 +1,1 @@
-# personal-website
-My personal website
+My personal [website](https://rappenecker.me/) written in HTML, CSS and JavaScript.
